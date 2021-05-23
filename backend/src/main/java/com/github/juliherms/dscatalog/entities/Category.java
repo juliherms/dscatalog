@@ -8,6 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * This class responsible to represents Category
+ */
 @Entity
 @Table(name="tb_category")
 public class Category implements Serializable {
