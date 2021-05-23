@@ -4,6 +4,7 @@ import com.github.juliherms.dscatalog.entities.Category;
 import com.github.juliherms.dscatalog.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ public class CategoryService {
     @Autowired
     private CategoryRepository repo;
 
+    @Transactional(readOnly = true)
     public List<Category> findAll(){
         return  repo.findAll();
     }
